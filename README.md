@@ -8,9 +8,18 @@
 * 메인페이지
 * QnA페이지
 
-<img width="1791" alt="스크린샷 2022-12-13 오후 8 35 32" src="https://user-images.githubusercontent.com/90983846/207307580-fdbf8146-d20c-4e38-84ab-3cb8f8fa1e42.png">
+<img width="1829" alt="스크린샷 2022-12-13 오후 8 41 57" src="https://user-images.githubusercontent.com/90983846/207308773-7bf9b795-d590-410a-a1e2-dbe84dab60e0.png">
 
-<img width="1422" alt="스크린샷 2022-12-13 오후 8 37 43" src="https://user-images.githubusercontent.com/90983846/207308000-f87c09c1-fff1-4f1c-92e9-8636d9afbca7.png">
+<img width="1589" alt="스크린샷 2022-12-13 오후 8 42 18" src="https://user-images.githubusercontent.com/90983846/207308859-72916470-f52f-4969-9d85-6c5c247fa635.png">
+
+<img width="1348" alt="스크린샷 2022-12-13 오후 8 42 33" src="https://user-images.githubusercontent.com/90983846/207308899-8192330b-999f-42f0-ae25-b8f209e9ad05.png">
+
+<img width="1168" alt="스크린샷 2022-12-13 오후 8 42 50" src="https://user-images.githubusercontent.com/90983846/207308964-b7ef75c8-7752-43cd-8d2c-753fce33befc.png">
+
+<img width="1484" alt="스크린샷 2022-12-13 오후 8 43 08" src="https://user-images.githubusercontent.com/90983846/207309035-059b418c-1e03-4fbb-aa2f-4cef0dc8c0a9.png">
+
+<img width="1246" alt="스크린샷 2022-12-13 오후 8 43 41" src="https://user-images.githubusercontent.com/90983846/207309124-14d095ce-e30f-427c-804a-5c4137d6ed10.png">
+
 
 ## 프로젝트 일정 및 규모
 * 개발 기간 : 2022.09.29 ~ 22.10.16
