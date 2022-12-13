@@ -539,7 +539,7 @@
     // });
 
 
-    var dday = new Date("November 17, 2022, 0:00:00").getTime();
+    var dday = new Date("November 17, 2023, 0:00:00").getTime();
 
     setInterval(function () {
 
