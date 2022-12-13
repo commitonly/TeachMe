@@ -29,3 +29,4 @@
 <br/>
 
 ## ERD
+<img width="707" alt="티치미 ERD" src="https://user-images.githubusercontent.com/90983846/207294196-cc1379e5-9762-4c01-a1c7-6f8fffa38f5d.png">
