@@ -62,7 +62,6 @@
         border-color: white;
         margin-top: 150px;
         margin-bottom: 100px;
-        color: black;
     }
 
     #tctext {
