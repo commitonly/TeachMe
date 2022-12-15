@@ -6,7 +6,7 @@
 <br/>
 ## 기여한 파트
 * 메인페이지
-* QnA페이지
+* QnA페이지(CRUD, 비밀글)
 
 <img width="1829" alt="스크린샷 2022-12-13 오후 8 41 57" src="https://user-images.githubusercontent.com/90983846/207308773-7bf9b795-d590-410a-a1e2-dbe84dab60e0.png">
 
