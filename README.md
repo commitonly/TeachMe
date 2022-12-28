@@ -11,7 +11,6 @@
   - 퀵메뉴 및 Top버튼
   - 동영상 삽입 및 강의수강평점 출력
   - 그 외 메인페이지 기능 및 디자인 기여도 100%
-<br/>
 * QnA페이지
   - 게시판 CRUD 구현
   - 내가 쓴 글 모아보기
@@ -23,26 +22,16 @@
   - 답글 확인 시 원글 패스워드 입력 후 확인가능
   - 로그인 비로그인에 따른 노출정보 구분
   - 작성자 ** 개인정보 숨김 처리 // 로그인한 유저가 쓴 본인 글은 작성자 풀네임 타인의 글은 ** 처리
-
 <img width="1829" alt="스크린샷 2022-12-13 오후 8 41 57" src="https://user-images.githubusercontent.com/90983846/207308773-7bf9b795-d590-410a-a1e2-dbe84dab60e0.png">
-
 <img width="1589" alt="스크린샷 2022-12-13 오후 8 42 18" src="https://user-images.githubusercontent.com/90983846/207308859-72916470-f52f-4969-9d85-6c5c247fa635.png">
-
 <img width="1348" alt="스크린샷 2022-12-13 오후 8 42 33" src="https://user-images.githubusercontent.com/90983846/207308899-8192330b-999f-42f0-ae25-b8f209e9ad05.png">
-
 <img width="1168" alt="스크린샷 2022-12-13 오후 8 42 50" src="https://user-images.githubusercontent.com/90983846/207308964-b7ef75c8-7752-43cd-8d2c-753fce33befc.png">
-
 <img width="1484" alt="스크린샷 2022-12-13 오후 8 43 08" src="https://user-images.githubusercontent.com/90983846/207309035-059b418c-1e03-4fbb-aa2f-4cef0dc8c0a9.png">
-
 <img width="1246" alt="스크린샷 2022-12-13 오후 8 43 41" src="https://user-images.githubusercontent.com/90983846/207309124-14d095ce-e30f-427c-804a-5c4137d6ed10.png">
-
-
 ## 프로젝트 일정 및 규모
 * 개발 기간 : 2022.09.29 ~ 22.10.16
-
 * 인원 : 6명 (FullStack)
   <br/>
-
 ## 팀원
 | **이름** | **역할** | **담당 기능**           |**Git URL**                     |
 |--------|-------|---------------------|--------------------------------|
@@ -53,6 +42,5 @@
 | 최진아    | 풀스택   | 시간표, 학생 마이페이지       | https://github.com/j-a-27 |
 | 정우진    | 풀스택   | 자유게시판, 마이 커뮤니티      | https://github.com/jwjmuse1028 |
 <br/>
-
 ## ERD
 <img width="707" alt="티치미 ERD" src="https://user-images.githubusercontent.com/90983846/207294196-cc1379e5-9762-4c01-a1c7-6f8fffa38f5d.png">
