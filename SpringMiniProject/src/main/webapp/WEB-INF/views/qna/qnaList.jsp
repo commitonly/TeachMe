@@ -8,91 +8,12 @@
 <head>
     <meta charset="UTF-8">
     <title>TeachMe입시학원 | Study and Changes Life</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<%--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">--%>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <c:set var="root" value="<%=request.getContextPath() %>"/>
     <script src="${pageContext.request.contextPath}/resources/javascript/qna.js"></script>
     <link rel="stylesheet" type="text/css" href="${root}/css/qna.css">
-    <style>
-
-        button:focus {
-            outline: none;
-        }
-
-
-        li > a.page-link {
-            display: block;
-            justify-content: center;
-            align-items: center;
-            vertical-align: middle;
-            text-align: center;
-            margin: auto;
-            background-color: white;
-            width: 50px;
-        }
-
-        ul.pagination {
-            justify-content: center;
-        }
-
-        table > td > a {
-            text-decoration: none;
-        }
-
-
-
-
-
-
-        /*#main_menu {*/
-        /*    position: fixed;*/
-        /*    width: 70px;*/
-        /*    height: 210px;*/
-        /*    right: 60px;*/
-        /*    border-radius: 70px;*/
-        /*    top: 35%;*/
-        /*    text-align: center;*/
-
-        /*}*/
-
-        .cuz {
-            width: 50px;
-        }
-
-        ul {
-            padding: 0;
-        }
-
-        li {
-            list-style: none;
-            line-height: 34px;
-        }
-
-        a {
-            text-decoration: none;
-            color: black;
-            text-align: center;
-        }
-
-        .snd_menu {
-            background: #efefef;
-        }
-
-        .sub_menu {
-            display: none;
-        }
-
-
-
-
-
-
-
-
-
-
-    </style>
 </head>
 <body>
 
