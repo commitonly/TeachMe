@@ -1,8 +1,19 @@
-button.firstBtn:focus{
+.qnaTitle{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 80px;
+    padding-bottom: 0px;
+    font-family: abster;
+}
+
+.container{
+    width: 100%;
+}
+
+tton.firstBtn:focus{
     border: none;
     outline:none;
 }
-
 
 
 button:focus {
@@ -73,7 +84,7 @@ button:focus {
     font-size: 15px;
 }
 
-.myask{
+.askBoxAll{
     font-size: 15px;
     text-decoration: none;
     color: black;
@@ -82,7 +93,7 @@ button:focus {
     border-radius: 15px;
     border: 1px solid black;
 }
-.myask2{
+.myAsk{
     font-size: 15px;
     text-decoration: none;
     color: black;
@@ -93,10 +104,11 @@ button:focus {
     margin: auto;
 }
 
-.myaskbox{
+.askBox{
     margin-top: 70px;
     display: block;
     text-align: center;
+    margin-bottom: 5px;
 }
 
 .qnalist{
