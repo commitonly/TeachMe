@@ -168,3 +168,68 @@ table > td > a {
     border: 1px solid;
     border-color: grey;
 }
+
+button:focus {
+    outline: none;
+}
+
+
+li > a.page-link {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    text-align: center;
+    margin: auto;
+    background-color: white;
+    width: 50px;
+}
+
+ul.pagination {
+    justify-content: center;
+}
+
+table > td > a {
+    text-decoration: none;
+}
+
+
+
+.cuz {
+    width: 50px;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    line-height: 34px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+.snd_menu {
+    background: #efefef;
+}
+
+.sub_menu {
+    display: none;
+}
+
+
+#main_menu {
+    position: fixed;
+    width: 70px;
+    height: 210px;
+    right: 60px;
+    border-radius: 70px;
+    top: 35%;
+    text-align: center;
+
+}
