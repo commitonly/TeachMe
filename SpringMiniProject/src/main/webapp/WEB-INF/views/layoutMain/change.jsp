@@ -1,20 +1,22 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<link rel="stylesheet" type="text/css" href="${root}/css/qna.css">
 <link rel="stylesheet" type="text/css" href="${root}/css/taeminfont.css">
 <link rel="stylesheet" type="text/css" href="${root}/css/TeachMeStyle.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/change.css">
 <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/javascript/change.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+<script type="text/javascript" src="/src"></script>
+
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <script>
-        document.getElementById('vidd').play();
     </script>
 </head>
 
@@ -23,139 +25,10 @@
   <span class="glyphicon glyphicon-chevron-up">
   </span>
 </a>
-
-
-<style>
-
-    .cuz {
-        width: 100px;
-    }
-
-    ul {
-        padding: 0;
-    }
-
-    li {
-        list-style: none;
-        line-height: 34px;
-    }
-
-    a {
-        text-decoration: none;
-        color: black;
-        text-align: center;
-    }
-
-    .snd_menu {
-        background: #efefef;
-    }
-
-    .sub_menu {
-        display: none;
-    }
-
-
-    #go {
-        background-color: white;
-        border-color: white;
-        margin-top: 150px;
-        margin-bottom: 100px;
-    }
-
-    #tctext {
-        background: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-
-    #go:hover {
-        background: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        /*background-color: #3f86ed;*/
-        border-color: grey;
-        outline-color: grey;
-    }
-
-    .wrap {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        position: absolute;
-        text-align: center;
-
-    }
-
-    #dynamic {
-        position: relative;
-        display: inline-block;
-        color: black;
-    }
-
-    #dynamic::after {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 0;
-        right: -10px;
-        width: 4px;
-        height: 100%;
-        background-color: black;
-        color: black;
-    }
-
-    #dynamic.active::after {
-        display: none;
-
-    }
-
-    .lg-text {
-        background: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        margin-top: 100px;
-    }
-
-    #main_menu {
-        position: fixed;
-        width: 70px;
-        height: 210px;
-        right: 60px;
-        border-radius: 70px;
-        top: 35%;
-        text-align: center;
-
-    }
-
-    video {
-        max-width: 80%;
-        display: block;
-        margin: 20px auto;
-    }
-
-
-    #dday {
-        width: 200px;
-        height: 50px;
-        bottom: -2%;
-        margin-left: 34.5%;
-        color: black;
-    }
-
-    #chcol:hover {
-        color: black;
-        font-style: italic;
-        font-weight: bold;
-
-    }
-
-</style>
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <body>
-<%--<div id="dday"></div>--%>
 <c:set var="root" value="<%=request.getContextPath() %>"></c:set>
-<!--Section-1-->
+<link rel="stylesheet" type="text/css" href="${root}/css/change.css">
+
 <section class="section-1">
     <div class="jumbotron d-flex align-items-center">
         <div class="gradient"></div>
@@ -174,12 +47,10 @@
                     id="count"></b></a></p>
 
         </div>
-        <!--container-fluid end-->
     </div>
 </section>
 
 
-<!--Section-5-->
 <section class="section-18" style="padding-bottom: 20px; padding-top: 50px;">
     <div class="container">
         <div class="row">
@@ -221,12 +92,9 @@
                 </div>
             </a>
         </div>
-        <!--/row-->
     </div>
-    <!--container-->
 </section>
 
-<!--Section-2-->
 <section class="section-2">
     <div class="container">
         <div class="row">
@@ -269,7 +137,6 @@
                         <p style="color: white;"><b style="color: white">매 해 바뀌는 입시제도 하에서 학생 개개인에게 맞는 학습방법과 전략을 짜기 위해선 학생이 원하는 수강 목록과 선생님을 고르되
                             자신이 책임지고 수업에 임해야 한다는 점을
                             강조하며 만든 시스템입니다</b> </p>
-                        <%--                            멋진 도전을 위해 함께한다면 결코 후회없는 1년이 될 것 입니다. </p>--%>
                         <p><b></b></p>
                     </div>
                 </div>
@@ -282,10 +149,6 @@
 <h5 style="text-align: center; color: grey;">키워드에 따라 원하는 강의를 발견해보세요</h5>
 <div class="container" style="width: 100%;">
     <div class="askBox" style="margin-bottom: 5px;">
-
-        <%--        <button type="button" onclick="location.href='qnaList?'" class="myask" style="width: 100px;">--%>
-        <%--            <b>수학강의</b>--%>
-        <%--        </button>&nbsp;--%>
 
         <button type="button" onclick="location.href='lecture/lectureList?lectypeb=국어종합'" class="myAsk" style="width: 100px;">
             <b>국어강의</b>
@@ -316,11 +179,9 @@
             <b>전체강의</b>
         </button>
 
-
     </div>
 </div>
 <br><br><br><br><br><br>
-
 
 <section class="section-3" style="border: 0; padding-bottom: 0;">
     <div class="container">
@@ -344,8 +205,6 @@
 
 </section>
 
-
-<!-- 아래는 원래꺼 위는 새로 추가 -->
 
 <section class="section-5" style="padding-bottom: 20px; padding-top: 50px;">
     <div class="container">
@@ -423,84 +282,70 @@
         </li>
     </ul>
 </nav>
-
-
 </body>
+<%--<script>--%>
 
-<script>
+<%--    $(document).ready(function dos() {--%>
+<%--        $('#main_menu > li > a').click(function () {--%>
+<%--            $(this).next($('.snd_menu sub_menu')).slideToggle('fast');--%>
+<%--        })--%>
 
-
-
-    $(document).ready(function dos() {
-        $('#main_menu > li > a').click(function () {
-            $(this).next($('.snd_menu sub_menu')).slideToggle('fast');
-            // $(this).show($('.snd_menu sub_menu')("slide",{direction:'left'},1000));
-        })
-        // e.stopPropagation();
-
-    })
-
-    let target = document.querySelector("#dynamic");
+<%--    })--%>
+<%--    //--%>
+<%--    let target = document.querySelector("#dynamic");--%>
 
 
-    function randomString() {
-        let stringArr = ["대한민국 입시 부동의 1위", "Study and Changes Life", "2021년도 합격률 98%",
-            "학생 맞춤형 공부법", "최고의 강사 최고의 커리큘럼", "10년 연속 합격률 95% 달성"];
-        let selectString = stringArr[Math.floor(Math.random() * stringArr.length)];
-        let selectStringArr = selectString.split("");
+<%--    function randomString() {--%>
+<%--        let stringArr = ["대한민국 입시 부동의 1위", "Study and Changes Life", "2021년도 합격률 98%",--%>
+<%--            "학생 맞춤형 공부법", "최고의 강사 최고의 커리큘럼", "10년 연속 합격률 95% 달성"];--%>
+<%--        let selectString = stringArr[Math.floor(Math.random() * stringArr.length)];--%>
+<%--        let selectStringArr = selectString.split("");--%>
 
-        return selectStringArr;
-    }
+<%--        return selectStringArr;--%>
+<%--    }--%>
 
+<%--    function resetTyping() {--%>
+<%--        target.textContent = "";--%>
 
-    function resetTyping() {
-        target.textContent = "";
+<%--        dynamic(randomString());--%>
+<%--    }--%>
+<%--    function dynamic(randomArr) {--%>
 
-        dynamic(randomString());
-    }
+<%--        if (randomArr.length > 0) {--%>
+<%--            target.textContent += randomArr.shift();--%>
+<%--            setTimeout(function () {--%>
+<%--                dynamic(randomArr);--%>
+<%--            }, 80);--%>
+<%--        } else {--%>
+<%--            setTimeout(resetTyping, 3000);--%>
+<%--        }--%>
 
+<%--    }--%>
 
-    function dynamic(randomArr) {
-
-        if (randomArr.length > 0) {
-            target.textContent += randomArr.shift();
-            setTimeout(function () {
-                dynamic(randomArr);
-            }, 80);
-        } else {
-            setTimeout(resetTyping, 3000);
-        }
-
-    }
-
-    dynamic(randomString());
+<%--    dynamic(randomString());--%>
 
 
-    function blink() {
-        target.classList.toggle("active");
+<%--    function blink() {--%>
+<%--        target.classList.toggle("active");--%>
 
-    }
+<%--    }--%>
 
-    setInterval(blink, 500);
-
-
-    var dday = new Date("November 17, 2023, 0:00:00").getTime();
-
-    setInterval(function () {
-
-        var today = new Date().getTime();
-        var gap = dday - today;
-        var day = Math.ceil(gap / (1000 * 60 * 60 * 24));
-        var hour = Math.ceil((gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var min = Math.ceil((gap % (1000 * 60 * 60)) / (1000 * 60));
-        var sec = Math.ceil((gap % (1000 * 60)) / 1000);
-        document.getElementById("count").innerHTML = "<b>2022년도 수능 D-DAY&nbsp;</b>  " + day + "일 " + hour + "시간 " + min + "분 " + sec + "초";
-    }, 1000);
+<%--    setInterval(blink, 500);--%>
 
 
+<%--    var dday = new Date("November 17, 2023, 0:00:00").getTime();--%>
+
+<%--    setInterval(function () {--%>
+
+<%--        var today = new Date().getTime();--%>
+<%--        var gap = dday - today;--%>
+<%--        var day = Math.ceil(gap / (1000 * 60 * 60 * 24));--%>
+<%--        var hour = Math.ceil((gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));--%>
+<%--        var min = Math.ceil((gap % (1000 * 60 * 60)) / (1000 * 60));--%>
+<%--        var sec = Math.ceil((gap % (1000 * 60)) / 1000);--%>
+<%--        document.getElementById("count").innerHTML = "<b>2022년도 수능 D-DAY&nbsp;</b>  " + day + "일 " + hour + "시간 " + min + "분 " + sec + "초";--%>
+<%--    }, 1000);--%>
 
 
-</script>
-
-
+<%--</script>--%>
 </html>

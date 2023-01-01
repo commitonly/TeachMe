@@ -14,23 +14,17 @@
 
 </head>
 <style>
-
     .footerarea{
         background-color: lightgray;
     }
 
-
-
 </style>
 <body>
-<!-- Copyright -->
 <div class="footer-copyright text-center">
     <div class="gradient"></div>
 </div>
-<!-- Copyright -->
 
 </footer>
-<!-- Footer -->
 </section>
 
     <div class="footerarea" >

@@ -1,0 +1,114 @@
+
+.cuz {
+    width: 100px;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    line-height: 34px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+.snd_menu {
+    background: #efefef;
+}
+
+.sub_menu {
+    display: none;
+}
+
+
+#go {
+    background-color: white;
+    border-color: white;
+    margin-top: 150px;
+    margin-bottom: 100px;
+}
+
+#tctext {
+    background: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+#go:hover {
+    background: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /*background-color: #3f86ed;*/
+    border-color: grey;
+    outline-color: grey;
+}
+
+.wrap {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    text-align: center;
+
+}
+
+#dynamic {
+    position: relative;
+    display: inline-block;
+    color: black;
+}
+
+#dynamic::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -10px;
+    width: 4px;
+    height: 100%;
+    background-color: black;
+    color: black;
+}
+
+#dynamic.active::after {
+    display: none;
+
+}
+
+.lg-text {
+    background: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 100px;
+}
+
+#main_menu {
+    position: fixed;
+    width: 70px;
+    height: 210px;
+    right: 60px;
+    border-radius: 70px;
+    top: 35%;
+    text-align: center;
+
+}
+
+video {
+    max-width: 80%;
+    display: block;
+    margin: 20px auto;
+}
+
+#chcol:hover {
+    color: black;
+    font-style: italic;
+    font-weight: bold;
+
+}
