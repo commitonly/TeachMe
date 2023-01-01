@@ -15,6 +15,7 @@ import util.ChangeName;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.io.File;
+import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
@@ -26,8 +27,6 @@ public class QnaController {
     QnaServiceInter qnaService;
     @Autowired
     UserServiceInter userService;
-
-
 
 
     @GetMapping("/qna/qnaForm") //게시판 작성폼
@@ -48,7 +47,6 @@ public class QnaController {
         model.addAttribute("relevel",relevel);
         model.addAttribute("currentPage",currentPage);
         model.addAttribute("pass",pass);
-//        System.out.println(pass);
         //제목에 새글일경우 "", 답글일 경우 해당 제목을 넣어보자
         String content="";
         if(qnanum>0) {
@@ -60,39 +58,29 @@ public class QnaController {
     }
 
 
-
-
     @GetMapping("/qna/qnaDetail") //게시판 디테일
     @ResponseBody
     public ModelAndView qnaDetail(int qnanum, int currentPage, HttpServletRequest request){
-
 
         ModelAndView mview = new ModelAndView();
         HttpSession session = request.getSession();
 
         int usernum = (int) session.getAttribute("usernum");
-        System.out.println(usernum);
-
         QnaDto dto = qnaService.selectByNum(qnanum);
-
         mview.addObject("dto", dto);
         mview.addObject("currentPage", currentPage);
-//        mview.addObject("dto", qnatype);
-        System.out.println(dto.getQnatype());
+
+
 
         if (usernum==12 || usernum==dto.getUsernum() || dto.getQnatype().equals("공지사항") ){
-
-            // 클릭한 글에 regroupnumber를 가져오고 로그인한 상태에서 해당 유저가 쓴 글의 리스트를 가져와야함 ( 내가쓴글들의 qnanum을 가져와야함 )
-            // qnanum이 여러개인데 그중 내가 클릭한 글의 regroup num이랑 일치하는게 있으면
+            // 클릭한 글에 regroup number를 가져오고 로그인한 상태에서 해당 유저가 쓴 글의 리스트를 가져와야함 ( 내가쓴글들의 qnanum을 가져와야함 )
+            // qnanum이 여러개인데 그 중 내가 클릭한 글의 regroup num이랑 일치하는게 있으면
             mview.setViewName("/main/qna/qnaDetail");
-
-        }else {
+        }else if (usernum!=0){
             mview.setViewName("/main/qna/secretQna");
-
         }
         return mview;
     }
-
     @GetMapping("/qna/secretQna") //암호체크
     public ModelAndView secretQna(int qnanum, int currentPage, String pass){
 
@@ -104,6 +92,7 @@ public class QnaController {
         mview.addObject("dto", dto);
         mview.addObject("currentPage", currentPage);
         mview.addObject("pass", pass);
+
 
         mview.setViewName("/main/qna/qnaDetail");
 
@@ -125,10 +114,6 @@ public class QnaController {
 //        int usernum=userService.getDataById(dto.getUsername()).getUsernum();
 //        dto.setUsernum(usernum);
         dto.setUsername(username);
-        System.out.println(dto.getQnatype());
-
-
-
 
         if (upload.get(0).getOriginalFilename().equals("")) {
             dto.setPhoto("no");
@@ -136,15 +121,12 @@ public class QnaController {
             String photo = "";
             for(MultipartFile multi:upload)
             {
-                //String newName = ChangeName.getChangeFileName(multi.getOriginalFilename());
                 photo+=multi.getOriginalFilename()+",";
 
                 try {
                     Path paths= Paths.get(path+"/"+multi.getOriginalFilename());
                     multi.transferTo(paths);
-//                     multi.transferTo(new File(path+"/"+newName));
                 } catch (Exception e) {
-//                     throw new RuntimeException(e);
                 }
             }
             photo = photo.substring(0, photo.length()-1);
@@ -161,12 +143,6 @@ public class QnaController {
             Model model
     )
     {
-//        //sw는 유저 아이디임으로 usernum을 얻어야한다
-//        String usernum=null;
-//        if(sw!=null){
-//             usernum=String.valueOf(userService.getDataById(sw).getUsernum());
-////            System.out.println("111="+sw+","+usernum);
-//        }
 
         int totalCount=qnaService.getTotalCount(usernum);
         int perPage=10;
@@ -209,7 +185,7 @@ public class QnaController {
     {
         QnaDto dto=qnaService.selectByNum(qnanum);
         int restep=dto.getRestep();
-        int regroup=dto.getRegroup();
+        int regroup=dto.getRegroup();  
         if(restep==0){
             qnaService.deleteQnaRegroup(regroup);
         }else{
@@ -220,8 +196,6 @@ public class QnaController {
 //                num에 해당하는  dto 얻고
         return  "redirect:qnaList?currentPage="+currentPage;
     }
-
-
 
 
 
@@ -243,11 +217,8 @@ public class QnaController {
                 photo+=newName+",";
 
                 try {
-//                    Path paths= Paths.get(path+"/"+newName);
-//                    multi.transferTo(paths);
                     multi.transferTo(new File(path+"/"+newName));
                 } catch (Exception e) {
-                    // throw new RuntimeException(e);
                 }
             }
             photo = photo.substring(0, photo.length()-1);

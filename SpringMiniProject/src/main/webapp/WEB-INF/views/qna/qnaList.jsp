@@ -23,25 +23,25 @@
 <div class="container">
     <div class="askBox">
         <button type="button" onclick="location.href='qnaList?'" class="askBoxAll">전체글보기</button>&nbsp;
+        <%-- 로그인이 되어 있을 경우에만 나의문의보기 활성화되는 코드 --%>
         <c:if test="${sessionScope.loginok!=null}">
-
             <button type="button" onclick="location.href='qnaList?usernum=${sessionScope.usernum}'" class="myAsk">
                 나의문의보기
             </button>
-
         </c:if>
     </div>
     <br>
-    <div class="qnalist" style="margin-top: 0px; margin-right: 10px; margin-bottom: 10px;">
-        <h3 class="hname-tm" style="text-align: right; margin-bottom: 0; color: grey;">총 ${totalCount} 개의 글이 있습니다</h3>
+    <div class="qnaList">
+        <h3 class="totalList">총 ${totalCount} 개의 글이 있습니다</h3>
     </div>
     <table class="table table-bordered">
-        <tr class="listbox-tm">
+        <tr>
             <th style="width: 30px; text-align:center; ">번호</th>
             <th style="width: 150px;text-align:center; ">제목</th>
             <th style="width: 50px;text-align:center; ">작성자</th>
             <th style="width: 20px;text-align:center; ">작성일</th>
         </tr>
+        <%--        --%>
         <c:if test="${totalCount==0 }">
             <tr>
                 <td colspan="6" align="center">
@@ -137,9 +137,6 @@
 <br>
 <!-- 글쓰기 버튼은 로그인을 해야만 보인다 -->
 <c:if test="${sessionScope.loginok!=null}">
-    <%--        <tr>--%>
-    <%--                <td colspan="6" align="right" style= "text-align:center; padding-top: 20px; padding-bottom: 25px;" >--%>
-
     <c:choose>
         <c:when test="${sessionScope.email=='admin@gmail.com'}">
             <button type="button" class="btn btn-outline"
@@ -153,10 +150,7 @@
         </c:otherwise>
     </c:choose>
 
-
     <br><br>
-    <%--                </td>--%>
-    <%--        </tr>--%>
 
 </c:if>
 
@@ -221,7 +215,7 @@
 </div>
 </div>
 
-
+<%-- 퀵 메뉴 삽입 --%>
 <nav class="cuz">
     <ul id="main_menu">
         <div class="btn_gotop"><a href="#"><img src="../image/tttt.png"
@@ -246,19 +240,6 @@
         </li>
     </ul>
 </nav>
-
-<%--<script>--%>
-
-<%--    $(document).ready(function dos() {--%>
-<%--        $('#main_menu > li > a').click(function () {--%>
-<%--            $(this).next($('.snd_menu sub_menu')).slideToggle('fast');--%>
-<%--            // $(this).show($('.snd_menu sub_menu')("slide",{direction:'left'},1000));--%>
-<%--        })--%>
-<%--        // e.stopPropagation();--%>
-
-<%--    })--%>
-
-<%--</script>--%>
 
 </body>
 </html>

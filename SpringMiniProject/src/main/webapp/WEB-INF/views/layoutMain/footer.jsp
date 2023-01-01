@@ -7,7 +7,6 @@
 <head>
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Yeon+Sung&display=swap" rel="stylesheet">
-<%--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">--%>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <c:set var="root" value="<%=request.getContextPath() %>"/>
@@ -15,20 +14,8 @@
 
 </head>
 <style>
-    /*#ftlogo{*/
-
-    /*    background: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);*/
-    /*    -webkit-background-clip: text;*/
-    /*    -webkit-text-fill-color: transparent;*/
-    /*}*/
-    /*#fttlogo{*/
-    /*    background: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);*/
-    /*    -webkit-background-clip: text;*/
-    /*    -webkit-text-fill-color: transparent;*/
-    /*}*/
 
     .footerarea{
-        /*background: linear-gradient(to right, lightgray, darkgray, lightgray);*/
         background-color: lightgray;
     }
 
@@ -45,31 +32,6 @@
 </footer>
 <!-- Footer -->
 </section>
-
-<%--<div class="footerbox">--%>
-<%--    <div class="footerhead">--%>
-<%--        <div>--%>
-<%--            <font style="font-size:10px; color:#dbdbdb"></font>--%>
-<%--            <span class="option_intro">--%>
-<%--              회사소개--%>
-<%--                </span>--%>
-<%--           </font>--%>
-<%--            <font style="font-size:10px; color:#dbdbdb">│</font>--%>
-<%--            <span class="option_intro">--%>
-<%--              이용약관--%>
-<%--           </span>--%>
-<%--            <font style="font-size:10px; color:#dbdbdb">│</font>--%>
-<%--            <span class="option_intro_highlight">--%>
-<%--              개인정보처리방침--%>
-<%--           </span>--%>
-<%--            <font style="font-size:10px; color:#dbdbdb">│</font>--%>
-<%--            <span class="option_intro" style="color:#808080">--%>
-<%--              <font style="color:#000000 !important">ErrorJava</font>--%>
-<%--              &emsp;&emsp;이준민&emsp;&emsp;유희준&emsp;&emsp;김태민&emsp;&emsp;이동형&emsp;&emsp;최진아&emsp;&emsp;정우진--%>
-<%--           </span>--%>
-<%--        </div>--%>
-<%--    </div>--%>
-<%--    <hr noshade="noshade" style="margin: 0;">--%>
 
     <div class="footerarea" >
         <%--footer 좌측 로고--%>

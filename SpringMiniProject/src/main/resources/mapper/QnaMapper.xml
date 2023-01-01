@@ -6,9 +6,8 @@
 		select ifnull(max(qnanum),0) from qna
 	</select>
 
-
 	<insert id="insertQna" parameterType="qnaDto">
-		insert into qna (usernum, username, qnatype, subject, content, photo,pass,writeday,regroup,restep,relevel,secret,gongzitype)
+		insert into qna (usernum, username, qnatype, subject, content, photo, pass, writeday, regroup, restep, relevel, secret, gongzitype)
 		values (#{usernum}, #{username}, #{qnatype}, #{subject}, #{content}, #{photo},#{pass},now(),#{regroup},#{restep},#{relevel},#{secret},#{gongzitype})
 	</insert>
 	<select id="getTotalCount" parameterType="int" resultType="int">

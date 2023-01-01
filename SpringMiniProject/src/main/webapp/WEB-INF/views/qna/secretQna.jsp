@@ -15,51 +15,6 @@
     <title>Title</title>
 </head>
 
-
-<%--<script>--%>
-<%--    function check_pw(){--%>
-
-<%--        var pw = document.getElementById('pass1').value;--%>
-<%--        var SC = ["!","@","#","$","%"];--%>
-<%--        var check_SC = 0;--%>
-
-<%--        if(pw.length>4){--%>
-<%--            window.alert('비밀번호는 4글자 이하만 가능합니다');--%>
-<%--            document.getElementById('pass1').value='';--%>
-<%--        }--%>
-<%--        for(var i=0;i<SC.length;i++){--%>
-<%--            if(pw.indexOf(SC[i]) != -1){--%>
-<%--                check_SC = 1;--%>
-<%--            }--%>
-<%--        }--%>
-
-<%--        }--%>
-<%--        if(document.getElementById('pass1').value !=''){--%>
-<%--            if(document.getElementById('pass1').value){--%>
-<%--                document.getElementById('check').innerHTML='비밀번호가 일치합니다.'--%>
-<%--                document.getElementById('check').style.color='blue';--%>
-<%--            }--%>
-<%--            else{--%>
-<%--                document.getElementById('check').innerHTML='비밀번호가 일치하지 않습니다.';--%>
-<%--                document.getElementById('check').style.color='red';--%>
-<%--            }--%>
-<%--    }--%>
-<%--</script>--%>
-
-
-
-
-
-
-
-
-
-
-
-
-<%--<c:if test="${sessionScope.email=='admin@gmail.com'}">--%>
-<%--&lt;%&ndash;    <meta http-equiv="Accept" content="0;url=secretQna?qnanum=${dto.qnanum}&currentPage=${currentPage} ">&ndash;%&gt;--%>
-<%--</c:if>--%>
 <style>
 
 
@@ -124,40 +79,14 @@
     <form action="qnaDetail" name="frm" method="get" style="text-align: center;">
         <input type="hidden" name="qnanum" value="${dto.qnanum}">
         <input type="hidden" name="currentPage" value="${currentPage}">
-<%--        <input type="hidden" name="pass" value="${dto.pass}">--%>
-
-<%--        <input type="hidden" name="pass" value="${dto.secret}" style="text-align: center;">--%>
 
 
             <div id="allbs">
-
-
-
-<%--                <c:choose>  <!-- if, else의 시작임을 정의 -->--%>
-<%--                    <c:when test="${조건}"> <!-- if와 동일 -->--%>
-<%--                        해당 조건에 맞는경우 실행--%>
-<%--                    </c:when> <!-- if 종료 -->--%>
-<%--                    <c:otherwise> <!-- else와 동일 -->--%>
-<%--                        그 외의 경우 실행--%>
-<%--                    </c:otherwise> <!-- else 종료 -->--%>
-<%--                </c:choose>  <!-- if, else의 종료임을 정의-->--%>
-
-
-
-
-
-
-
-
-
 
                 <table style="text-align: center; align-items: center; display: block; margin: 0 auto;" >
               <tr>
                   <th style="text-align: center; display: block; align-items: center; margin-right: 10px;" > 비밀번호 </th>
                   <td>
-<%--&lt;%&ndash;                      <c:if test="${dto.username=='티치미'}">&ndash;%&gt;--%>
-<%--                      <input type="password" name="pass" size="20" maxlength="4" placeholder="비밀번호 4자리 입력" pattern="[0-9]+" style="text-align: center;" id="pass1" required="required">--%>
-<%--&lt;%&ndash;                      </c:if>&ndash;%&gt;--%>
                       <c:choose>
                       <c:when test="${dto.restep==0}">
                           <input type="password" name="pass" size="20" maxlength="4" placeholder="비밀번호 4자리 입력" pattern="[0-9]+" style="text-align: center;" id="pass1" required="required">
@@ -172,8 +101,6 @@
 
             </div>
 
-
-<%--        <button type="button" onclick="location.href='secretQna?qnanum=${dto.qnanum}&currentPage=${currentPage}'" style="width: 50px; margin-bottom: 20px; background-color: white; border-radius: 15px; border: 1px solid grey;" id="checkpass">확인</button>--%>
        <div style="padding-top: 20px;">
         <button type="button" onclick="printName()" style="width: 50px; margin-bottom: 20px; background-color: white; border-radius: 15px; border: 1px solid grey;" id="checkpass">확인</button>
         <button type="button" onclick="location.href='qnaList' " style="width: 50px; margin-bottom: 20px; background-color: white; border-radius: 15px; border: 1px solid grey; margin-left: 5px;">취소</button>
@@ -183,28 +110,9 @@
 </div>
 
 <script>
-    <%--function printName() {--%>
-    <%--    const pass1=--%>
-    <%--        document.getElementById('pass1').value;--%>
-    <%--        if (pass1==${sessionScope.userpass})--%>
-    <%--        &lt;%&ndash;if (pass1==${dto.pass})&ndash;%&gt;--%>
-    <%--        location.href="secretQna?qnanum=${dto.qnanum}&currentPage=${currentPage}";--%>
-    <%--        else--%>
-    <%--    {--%>
-    <%--        alert("비밀번호가 맞지 않습니다");--%>
-    <%--        location.reload();--%>
-    <%--    }--%>
-    <%--}--%>
     function printName() {
-        // const pass2=
-        //     document.getElementById('pass2').value;
         const pass1=
             document.getElementById('pass1').value;
-
-            <%--if (pass2==${dto.pass}){--%>
-            <%--location.href="secretQna?qnanum=${dto.qnanum}&currentPage=${currentPage}";--%>
-            <%--}--%>
-
         if (pass1==${dto.pass}){
             location.href="secretQna?qnanum=${dto.qnanum}&currentPage=${currentPage}";
             }
@@ -214,29 +122,16 @@
             location.reload();
         }
 
-
     }
-
-
 
     $(document).ready(function dos() {
         $('#main_menu > li > a').click(function () {
             $(this).next($('.snd_menu sub_menu')).slideToggle('fast');
-            // $(this).show($('.snd_menu sub_menu')("slide",{direction:'left'},1000));
         })
-        // e.stopPropagation();
-
     })
 
 
-
-
-
-
-
-
 </script>
-
 
 <nav class="cuz">
     <ul id="main_menu">

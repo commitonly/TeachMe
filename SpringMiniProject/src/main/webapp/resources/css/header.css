@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+
 .headerarea {
     display: flex;
     align-items: center;
@@ -87,32 +88,72 @@ span.signupmenu {
     text-shadow: 1px 1px 5px black;
 }
 
-
-
-/* icon */
-/*
-img.icon_myinfo {
-    width: 30.7px;
-    height: 30.7px;
-    margin: 10px 10px 10px 980px;
-    padding: 2.6px 2.6px 2.6px 2.6px;
+.bt1{
+    width: 100px;
+    height: 35px;
+    color: #fff;
     cursor: pointer;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+
 }
 
-img.icon_myactivity {
-    width: 31px;
-    height: 31px;
-    margin: 10px;
-    padding: 1px;
-    cursor: pointer;
+
+.bt1 {
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
 }
 
-.icon_myscrap {
-    width: 30.7px;
-    height: 30.7px;
-    margin: 10px;
-    padding: 1px;
-    cursor: pointer;
+.bt1:hover{
+    background-image: linear-gradient(to right, white,skyblue,blue,darkblue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
-*/
 
+
+#logos{
+    background: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    margin-left: 200px;
+    text-decoration: none;
+    color: #3f86ed;
+}
+
+#logos:hover{
+    background-image: linear-gradient(to left, white,skyblue,#b3d7ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+#rowfor{
+    text-align: left;
+}
+
+
+#headerfor{
+    margin-left: -50px;
+    padding-top: 40px;
+
+
+}
+
+@keyframes slide{
+
+    from{
+        left: -200px;
+    }
+
+    to{
+        left: 200px;
+    }
+
+}
+#h1for{
+    font-family: abster;
+    margin: auto;
+    text-decoration: none;
+}

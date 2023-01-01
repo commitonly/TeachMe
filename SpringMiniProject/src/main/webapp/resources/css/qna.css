@@ -1,3 +1,8 @@
+@font-face {
+    font-family: abster;
+    src: url('abster-webfont.woff') format('woff');
+}
+
 .qnaTitle{
     text-align: center;
     font-size: 30px;
@@ -80,8 +85,12 @@ button:focus {
     color: black;
 }
 
-.hname-tm{
+.totalList{
     font-size: 15px;
+    text-align: right;
+    margin-bottom: 0;
+    color: grey;
+
 }
 
 .askBoxAll{
@@ -111,22 +120,18 @@ button:focus {
     margin-bottom: 5px;
 }
 
-.qnalist{
+.qnaList{
     text-align: center;
+    margin-top: 0px;
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
 
+.
 
-#writecolor{
-    color: black;
-    border: 1px solid black;
-    text-align: center;
-    display: block;
-    margin: auto;
-}
-@font-face {
-    font-family: abster;
-    src: url('abster-webfont.woff') format('woff');
-}
+
+
+
 
 
 
@@ -229,4 +234,12 @@ a {
     top: 35%;
     text-align: center;
 
+}
+
+#writecolor{
+    color: black;
+    border: 1px solid black;
+    text-align: center;
+    display: block;
+    margin: auto;
 }

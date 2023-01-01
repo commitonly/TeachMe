@@ -5,9 +5,7 @@
 <link rel="stylesheet" type="text/css" href="${root}/css/qna.css">
 <link rel="stylesheet" type="text/css" href="${root}/css/taeminfont.css">
 <link rel="stylesheet" type="text/css" href="${root}/css/TeachMeStyle.css">
-<script src="${pageContext.request.contextPath}/resources/javascript/taemin.js"></script>
 <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-<%--<script src="${pageContext.request.contextPath}/taemin.js"></script>--%>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
@@ -268,7 +266,7 @@
                     </div>
                     <div class="col-lg-10 col-sm-12">
                         <h3><b style="color: white;">세 번째</b></h3>
-                        <p style="color: white;"><b style="white;">매 해 바뀌는 입시제도 하에서 학생 개개인에게 맞는 학습방법과 전략을 짜기 위해선 학생이 원하는 수강 목록과 선생님을 고르되
+                        <p style="color: white;"><b style="color: white">매 해 바뀌는 입시제도 하에서 학생 개개인에게 맞는 학습방법과 전략을 짜기 위해선 학생이 원하는 수강 목록과 선생님을 고르되
                             자신이 책임지고 수업에 임해야 한다는 점을
                             강조하며 만든 시스템입니다</b> </p>
                         <%--                            멋진 도전을 위해 함께한다면 결코 후회없는 1년이 될 것 입니다. </p>--%>
@@ -283,38 +281,38 @@
 <br>
 <h5 style="text-align: center; color: grey;">키워드에 따라 원하는 강의를 발견해보세요</h5>
 <div class="container" style="width: 100%;">
-    <div class="myaskbox" style="margin-bottom: 5px;">
+    <div class="askBox" style="margin-bottom: 5px;">
 
         <%--        <button type="button" onclick="location.href='qnaList?'" class="myask" style="width: 100px;">--%>
         <%--            <b>수학강의</b>--%>
         <%--        </button>&nbsp;--%>
 
-        <button type="button" onclick="location.href='lecture/lectureList?lectypeb=국어종합'" class="myask" style="width: 100px;">
+        <button type="button" onclick="location.href='lecture/lectureList?lectypeb=국어종합'" class="myAsk" style="width: 100px;">
             <b>국어강의</b>
         </button>
 
-        <button type="button" onclick="location.href='lecture/lectureList?lectypea=역사'" class="myask" style="width: 100px;">
+        <button type="button" onclick="location.href='lecture/lectureList?lectypea=역사'" class="myAsk" style="width: 100px;">
             <b>사회강의</b>
         </button>
 
-        <button type="button" onclick="location.href='lecture/lectureList?lectypeb=생명과학'" class="myask" style="width: 100px;">
+        <button type="button" onclick="location.href='lecture/lectureList?lectypeb=생명과학'" class="myAsk" style="width: 100px;">
             <b>과학강의</b>
         </button>
 
-        <button type="button" onclick="location.href='lecture/lectureList?lectypeb=아시아'" class="myask" style="width: 100px;">
+        <button type="button" onclick="location.href='lecture/lectureList?lectypeb=아시아'" class="myAsk" style="width: 100px;">
             <b>제2외국어</b>
         </button>
 
-        <button type="button" onclick="location.href='lecture/lectureList?lectypeb=영어'" class="myask" style="width: 100px;">
+        <button type="button" onclick="location.href='lecture/lectureList?lectypeb=영어'" class="myAsk" style="width: 100px;">
             <b>영어강의</b>
         </button>
 
-        <button type="button" onclick="location.href='lecture/lectureList?lectypeb=수학종합'" class="myask" style="width: 100px;">
+        <button type="button" onclick="location.href='lecture/lectureList?lectypeb=수학종합'" class="myAsk" style="width: 100px;">
             <b>수학강의</b>
         </button>
 
 
-        <button type="button" onclick="location.href='lecture/lectureList'" class="myask" style="width: 100px;">
+        <button type="button" onclick="location.href='lecture/lectureList'" class="myAsk" style="width: 100px;">
             <b>전체강의</b>
         </button>
 
@@ -340,27 +338,10 @@
                     <video class="inner-img" src="${root}/css/videos/wr.mp4" controls muted autoplay loop width="100%;"
                            style="border-radius: 20px; margin-left: 50px;" alt="services"></video>
                 </div>
-                <%--                    <img class="inner-img" src="" alt="services">--%>
-                <%--                    <img class="out-sideimg" src="" alt="services">--%>
             </div>
         </div>
     </div>
-    <%--            <div class="col-lg-7 col-md-12 p-0" data-aos="fade-left" data-aos-delay="300">--%>
-    <%--                <figure>--%>
-    <%--                    <video controls width="250" id="vidd" autoplay="autoplay" muted="muted">--%>
-    <%--                        source src="videos/wr.mp4" type="video/mp4">--%>
-    <%--                    </video>--%>
-    <%--&lt;%&ndash;                    <img class="inner-img" src="image/teach.jpg" alt="services" style="border-radius: 20px;">&ndash;%&gt;--%>
-    <%--&lt;%&ndash;                    <img class="out-sideimg" src="image/asd.jpg" alt="services" style="border-radius: 20px;">&ndash;%&gt;--%>
-    <%--                    <video width="100%" height="auto" autoplay loop muted controls class="out-sideimg"> <source src="video/wr.mp4" type="video/mp4" alt="services">--%>
-    <%--                    </video>--%>
-    <%--    <video class="out-sideimg" autoplay controls loop muted>--%>
-    <%--        <source src="video/wr.mp4" type="video/mp4">--%>
-    <%--    </video>--%>
-    <%--                </figure>--%>
-    <%--            </div>--%>
-    <%--        </div>--%>
-    <%--    </div>--%>
+
 </section>
 
 
@@ -444,20 +425,11 @@
 </nav>
 
 
-<%--</span><!-- /top-link-block -->--%>
-
-<%--<!--퀵메뉴바-->--%>
-<%--  <span id="top-link-block" class="hidden">--%>
-<%--  <div id="test_obj" style="border: none;"><b style="margin-left:18px; padding-top: 20px; display: inline-block; text-align: center; vertical-align: center; color: black;"><a href="#" class="well well-sm" onclick="$('html,body').animate({scrollTop:0},fast);return false;" id="toptop">--%>
-<%--      <img src="image/tttt.png" style="width: 130%;">--%>
-<%--  </a></b><br><br><br><b style="font-size: 15px; color: black; margin-left: 6px; padding-top: 15px;"></b><a href="${root}/qna/qnaList"><img src="image/1ask.png" style="width: 130%; "></a><br><br><br><b style="font-size: 15px; color: black; margin-left: 8px; padding-top: 40px; margin-top: 10px;" id="comu"><a href="${root}/board/boardFree"><img src="image/comu.png" style="width: 80%;margin-left: 16px; "></a></b></div>--%>
-<%--</span><!-- /top-link-block -->--%>
-
-
 </body>
 
-
 <script>
+
+
 
     $(document).ready(function dos() {
         $('#main_menu > li > a').click(function () {
@@ -512,33 +484,6 @@
     setInterval(blink, 500);
 
 
-    //
-    //     if ( ($(window).height() + 100) < $(document).height() ) {
-    //     $('#top-link-block').removeClass('hidden').affix({
-    //         // how far to scroll down before link "slides" into view
-    //         offset: {top:100}
-    //     });
-    // }
-
-
-    // 퀵메뉴바
-
-    //
-    // $(document).ready(function () {
-    //     var tmp = parseInt($("#test_obj").css('top'));
-    //
-    //     $(window).scroll(function () {
-    //         var scrollTop = $(window).scrollTop();
-    //         var obj_position = scrollTop + tmp + "px";
-    //
-    //         $("#test_obj").stop().animate({
-    //             "top": obj_position
-    //         }, 500);
-    //
-    //     }).scroll();
-    // });
-
-
     var dday = new Date("November 17, 2023, 0:00:00").getTime();
 
     setInterval(function () {
@@ -553,13 +498,6 @@
     }, 1000);
 
 
-    // var now = new Date();
-    // var then = new Date('nov 17,2022');
-    // var gap = now.getTime() - then.getTime();
-    // gap = Math.floor(gap / (1000 * 60 * 60 * 24)) * -1;
-    // document.write('<div id="dday" style="text-align: center; width: 550px; position: absolute; font-size: 25px; padding-top: 5px; color: black;">2022년도 수능 D-<span style="font-size:25px; text-align: center; color: black; ">' + gap + '</span></div>');
-
-    //
 
 
 </script>

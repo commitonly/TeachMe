@@ -24,6 +24,7 @@
 	<script src="${pageContext.request.contextPath}/resources/javascript/animate.js"></script>
     <script src="${pageContext.request.contextPath}/resources/javascript/custom.js"></script>
     <script src="${pageContext.request.contextPath}/resources/javascript/bootstrap.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/javascript/taemin.js"></script>
 	<link rel="stylesheet" type="text/css" href="${root}/css/taemin.css">
 	<link rel="stylesheet" type="text/css" href="${root}/css/qna.css">
 	<link rel="stylesheet" type="text/css" href="${root}/css/taeminfont.css">

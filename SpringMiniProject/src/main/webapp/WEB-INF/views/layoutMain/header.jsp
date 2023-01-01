@@ -8,116 +8,29 @@
     <meta charset="UTF-8">
     <title>TeachMe입시학원 | Study and Changes Life</title>
     <link rel="stylesheet" type="text/css" href="${root}/css/taemin.css">
-    <link rel="stylesheet" type="text/css" href="${root}/css/qna.css">
     <link rel="stylesheet" type="text/css" href="${root}/css/taeminfont.css">
     <link rel="stylesheet" type="text/css" href="${root}/css/TeachMeStyle.css">
     <link rel="stylesheet" type="text/css" href="${root}/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="${root}/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="${root}/css/qna.css">
     <script src="${pageContext.request.contextPath}/resources/javascript/taemin.js"></script>
-
-<style>
-
-    .bt1{
-        width: 100px;
-        height: 35px;
-        /*font-size: 16px;*/
-        /*font-weight: 600;*/
-        color: #fff;
-        cursor: pointer;
-        /*margin: 20px;*/
-        /*height: 55px;*/
-        text-align:center;
-        border: none;
-        background-size: 300% 100%;
-        border-radius: 50px;
-
-    }
-
-
-    .bt1 {
-        background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
-    }
-
-    .bt1:hover{
-        background-image: linear-gradient(to right, white,skyblue,blue,darkblue);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-
-    #logos{
-        background: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        /*position: absolute;*/
-        /*padding-bottom: 50px;*/
-        position: absolute;
-        margin-left: 200px;
-    }
-
-    #logos:hover{
-        background-image: linear-gradient(to left, white,skyblue,#b3d7ff);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-
-    #rowfor{
-        text-align: left;
-    }
-
-
-    #headerfor{
-        margin-left: -50px;
-        padding-top: 40px;
-        /*margin-bottom: 30px;*/
-
-
-    }
-
-    @keyframes slide{
-
-        from{
-            left: -200px;
-        }
-
-        to{
-            left: 200px;
-        }
-
-    }
-
-
-    /*#dday{*/
-    /*    width: 200px;*/
-    /*    height: 50px;*/
-    /*    border: 1px solid grey;*/
-    /*    top: 7%;*/
-    /*    margin-left: 80%;*/
-    /*    border: 1px solid black;*/
-    /*    color: black;*/
-    /*}*/
-
-
-</style>
 </head>
 <body>
 
 <c:set var="root" value="<%=request.getContextPath() %>"></c:set>
+<link rel="stylesheet" type="text/css" href="${root}/resources/css/header.css">
 <header id="headerfor">
 
     <div  id="rowrowfor">
         <div id="rowfor">
                 <div>
-                <h1 style="font-family: abster; margin: auto; text-decoration: none;" id="h1for"><a href="${root}" style="text-decoration: none; color: #3f86ed;" id="logos" data-aos="fade-right" data-aos-delay="100">TeachMe</a></h1>
+                <h1 id="h1for"><a href="${root}" id="logos" data-aos="fade-right" data-aos-delay="100">TeachMe</a></h1>
             </div>
-<%--            <div>--%>
             <div >
                 <a href="/mini/"><b style="color: #191919;  font-size: 40px" >
                 </b></a>
             </div>
         </div>
-        <!--/row-->
     </div>
     <div style="float: right;" >
     <!-- login button -->
@@ -150,27 +63,6 @@
                 },
             });
         });
-
-
-        //
-        // var now = new Date();
-        // var then = new Date('nov 17,2022');
-        // var gap = now.getTime() - then.getTime();
-        // gap = Math.floor(gap / (1000 * 60 * 60 * 24)) * -1;
-        // document.write('<div id="dday">2022년도 수능 D-<span style="font-size:33px;">' + gap + '</span></div>');
-
-        // var now = new Date();
-        // var then = new Date('nov 17,2022');
-        // var gap = now.getTime() - then.getTime();
-        // gap = Math.floor(gap / (1000 * 60 * 60 * 24)) * -1;
-        // document.write('<div id="dday" style="text-align: center; width: 250px; position: absolute;">2022년도 수능 D-<span style="font-size:25px; text-align: center;">' + gap + '</span></div>');
-
-
-
-
-
-
-
 
     </script>
 </header>

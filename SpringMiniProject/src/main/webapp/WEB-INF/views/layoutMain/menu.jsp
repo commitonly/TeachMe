@@ -50,38 +50,5 @@
         </div>
     </nav>
 
-        <!--container end-->
-
-<%--        <!-- login button -->--%>
-<%--       <c:if test="${sessionScope.loginok==null }">--%>
-<%--			<button type="button" id="btnloginMain" style=" margin-right: 110px;">로그인</button>--%>
-<%--       </c:if>--%>
-<%--        <c:if test="${sessionScope.loginok!=null && sessionScope.usertype=='user'}">--%>
-<%--             <b>${sessionScope.loginname}님</b>&nbsp;&nbsp;--%>
-<%--             <a href="${root}/student/timeTable" style="text-decoration: none; color: black;">마이페이지</a>&nbsp;--%>
-<%--            <button type="button" id="btnlogoutMain" style=" margin-right: 110px;" >로그아웃</button>--%>
-<%--        </c:if>--%>
-<%--        <c:if test="${sessionScope.loginok!=null && sessionScope.usertype=='manager'}">--%>
-<%--            <b>${sessionScope.loginname}님</b>	            &nbsp;&nbsp;--%>
-<%--            <a href="${root}/manager/main">관리자페이지</a>--%>
-<%--            <button type="button" id="btnlogoutMain" style=" margin-right: 110px;" >로그아웃</button>--%>
-<%--        </c:if>--%>
-<%--    </nav>--%>
-<%--     <script>--%>
-<%--     $("#btnloginMain").click(function () {--%>
-<%--         location.href="${root}/loginF";--%>
-<%--     });--%>
-
-<%--     $("#btnlogoutMain").click(function () {--%>
-<%--         $.ajax({--%>
-<%--             type:"get",--%>
-<%--             url:"${root}/logout",--%>
-<%--             dataType:"text",--%>
-<%--             success:function(res){--%>
-<%--                 location.reload();--%>
-<%--             },--%>
-<%--         });--%>
-<%--     });--%>
-<%-- </script>--%>
 </body>
 </html>
