@@ -13,96 +13,12 @@
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-    <style type="text/css">
-
-
-        div.alist pre{
-            text-indent: 10px; /*들여쓰기*/
-            color: black;
-        }
-        div.alist img{
-            width: 40px;
-            height: 40px;
-            cursor: pointer;
-            border: 1px solid gray;
-            border-radius: 10px;
-            margin-left: 10px;
-        }
-        #detailbox
-        {
-            margin: auto;
-            margin-bottom: 0px;
-        }
-
-        #buttonbox{
-            margin: auto;
-            text-align: center;
-            margin-top: 0;
-            margin-bottom: 40px;
-        }
-        #listing{
-            margin: auto;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        #tpst{
-            font-size: 15px;
-            text-decoration: none;
-            color: grey;
-            font-style: italic;
-        }
-
-
-
-        #main_menu {
-            position: fixed;
-            width: 70px;
-            height: 210px;
-            right: 60px;
-            border-radius: 70px;
-            top: 35%;
-            text-align: center;
-
-        }
-
-        .cuz {
-            width: 50px;
-        }
-
-        ul {
-            padding: 0;
-        }
-
-        li {
-            list-style: none;
-            line-height: 34px;
-        }
-
-        a {
-            text-decoration: none;
-            color: black;
-            text-align: center;
-        }
-
-        .snd_menu {
-            background: #efefef;
-        }
-
-        .sub_menu {
-            display: none;
-        }
-
-
-
-
-    </style>
-
-
 
 </head>
 <body>
 
 <c:set var="root" value="<%=request.getContextPath() %>"/>
+<link rel="stylesheet" type="text/css" href="${root}/css/qnadetail.css">
 <nav class="cuz">
     <ul id="main_menu">
         <div class="btn_gotop"><a href="#"><img src="../image/tttt.png"
@@ -144,7 +60,6 @@
             </tr>
             <tr height="500">
                 <td>
-<%--                    <c:if test="${qnanum}"--%>
                     <p>${dto.content}</p>
                     <c:if test="${dto.photo!='no'}">
                         <c:forTokens var="photo" items="${dto.photo}" delims=",">
@@ -168,14 +83,11 @@
                         </c:if>
                         <c:if test="${sessionScope.loginok!=null && sessionScope.usernum==dto.usernum || sessionScope.email=='admin@gmail.com'}">
                         <button type="button" onclick="if(confirm('게시글을 삭제하시겠습니까?')) location.href='delete?qnanum=${dto.qnanum}&currentPage=${currentPage}'" class="btn btn-outline adel" style="color: black; text-decoration: none; background-color: white; border: 1px solid black;" >삭제</button>
-<%--                        <button type="button" class="btn btn-outline adel" style="color: black; text-decoration: none; background-color: white; border: 1px solid black;" onclick="location.href='delete?qnanum=${dto.qnanum}&currentPage=${currentPage}'">삭제</button>--%>
                         </c:if>
                         <c:if test="${dto.restep==0 && sessionScope.email=='admin@gmail.com'}">
                             <button type="button" class="btn btn-outline"  style="color: black; text-decoration: none; background-color: white; border: 1px solid black;" onclick="location.href='qnaForm?qnanum=${dto.qnanum}&regroup=${dto.regroup}&restep=${dto.restep}&relevel=${dto.relevel}&currentPage=${currentPage}&pass=${dto.pass}'">답글</button>
                         </c:if>
-                        <%--        <div id="listing">--%>
                         <button type="button" class="btn btn-outline"  style="color: black; text-decoration: none; background-color: white; border: 1px solid black;" onclick="location.href='qnaList?currentPage=${currentPage}'">목록</button>
-                        <%--        </div>--%>
                     </div>
             </td>
                     </tr>
@@ -198,9 +110,7 @@
     $(document).ready(function dos() {
         $('#main_menu > li > a').click(function () {
             $(this).next($('.snd_menu sub_menu')).slideToggle('fast');
-            // $(this).show($('.snd_menu sub_menu')("slide",{direction:'left'},1000));
         })
-        // e.stopPropagation();
 
     })
 

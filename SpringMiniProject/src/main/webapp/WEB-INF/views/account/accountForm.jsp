@@ -114,8 +114,8 @@
 
     function loginClick() {
         //아이디와 비번 읽기
-        var email = $(".loginemail").val();
-        var userpass = $(".loginpass").val();
+        let email = $(".loginemail").val();
+        let userpass = $(".loginpass").val();
         console.log("btnclick");
         $.ajax({
             type:"get",

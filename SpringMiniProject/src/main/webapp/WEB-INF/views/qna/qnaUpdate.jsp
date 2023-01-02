@@ -9,74 +9,6 @@
   <meta charset="UTF-8">
   <title>Insert title here</title>
 </head>
-<style>
-
-    #main_menu {
-        position: fixed;
-        width: 70px;
-        height: 210px;
-        right: 60px;
-        border-radius: 70px;
-        top: 35%;
-        text-align: center;
-
-    }
-
-    .cuz {
-        width: 50px;
-    }
-
-    ul {
-        padding: 0;
-    }
-
-    li {
-        list-style: none;
-        line-height: 34px;
-    }
-
-    a {
-        text-decoration: none;
-        color: black;
-        text-align: center;
-    }
-
-    .snd_menu {
-        background: #efefef;
-    }
-
-    .sub_menu {
-        display: none;
-    }
-
-    .four{
-    font-family: cursive;
-    text-align:center;
-    width:550px;
-    height:550px;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    top:35%;
-    left:35%;
-    position:absolute;
-    border: 1px solid gray;
-  }
-
-  .four h1{
-    height:20px;
-    background-color:;
-    line-height: 20px;
-    text-align:center;
-  }
-
-  #updatebox{
-    margin: auto;
-    margin-bottom: 20px;
-    margin-top: 20px;
-  }
-</style>
 <script>
 
     $(function () {
@@ -109,6 +41,7 @@
 </script>
 <body>
 <c:set var="root" value="<%=request.getContextPath() %>"/>
+<link rel="stylesheet" type="text/css" href="${root}/css/qnaupdate.css">
 <c:if test="${sessionScope.loginok==null}">
   <script type="text/javascript">
     alert("먼저 로그인해주세요");
@@ -123,14 +56,6 @@
   <input type="hidden" name="currentPage" value="${currentPage}">
 
   <table class="table table-bordered" style="width: 500px;" id="updatebox">
-<%--    <tr>--%>
-<%--      <th style="width: 100px;">제목</th>--%>
-<%--      <td>--%>
-<%--        <input type="text" name="subject" class="form-control" required="required"--%>
-<%--               value="${dto.subject}">--%>
-<%--      </td>--%>
-
-<%--    </tr>--%>
 
     <tr>
 
@@ -166,11 +91,9 @@
 
           </script>
         <tr>
-<%--    <td style="width: 100px; text-align: center; padding-top: 5px; font-style: ">기존사진</td>--%>
     <td colspan="2" style="text-align: center; font-style: italic; color: grey"  >사진 선택 없을 시 기존사진이 저장됩니다</td>
 </tr>
     </tr>
-<%--    <td>${dto.content}</td>--%>
     <tr>
       <td colspan="2">
             <textarea name="content" class="form-control" required="required"
@@ -214,12 +137,6 @@
 </nav>
 
 
-
-
-
-
-
-
 </body>
 
 <script>
@@ -227,9 +144,7 @@
     $(document).ready(function dos() {
         $('#main_menu > li > a').click(function () {
             $(this).next($('.snd_menu sub_menu')).slideToggle('fast');
-            // $(this).show($('.snd_menu sub_menu')("slide",{direction:'left'},1000));
         })
-        // e.stopPropagation();
 
     })
 

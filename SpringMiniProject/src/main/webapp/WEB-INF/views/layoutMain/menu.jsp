@@ -1,28 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
 </head>
-<style>
-
-    #menucolor:hover{
-        color:#3f86ed;
-    }
-    #menucolor2:hover{
-        color:#3f86ed;
-    }
-    #menucolor3:hover{
-        color:#3f86ed;
-    }
-    #menucolor4:hover{
-        color:#3f86ed;
-    }
-</style>
 <body>
 <c:set var="root" value="<%=request.getContextPath() %>"></c:set>
+<link rel="stylesheet" type="text/css" href="${root}/css/qnamenu.css">
   <span class="position-absolute trigger"><!-- hidden trigger to apply 'stuck' styles --></span>
     <nav class="navbar navbar-expand-sm sticky-top navbar-dark" style="border: 0">
         <div class="container">

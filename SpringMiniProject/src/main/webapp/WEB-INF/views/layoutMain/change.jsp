@@ -6,11 +6,9 @@
 <link rel="stylesheet" type="text/css" href="${root}/css/change.css">
 <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script src="${pageContext.request.contextPath}/resources/javascript/change.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
-<script type="text/javascript" src="/src"></script>
 
 <!DOCTYPE html>
 <html>
@@ -283,69 +281,69 @@
     </ul>
 </nav>
 </body>
-<%--<script>--%>
+<script>
 
-<%--    $(document).ready(function dos() {--%>
-<%--        $('#main_menu > li > a').click(function () {--%>
-<%--            $(this).next($('.snd_menu sub_menu')).slideToggle('fast');--%>
-<%--        })--%>
+    $(document).ready(function dos() {
+        $('#main_menu > li > a').click(function () {
+            $(this).next($('.snd_menu sub_menu')).slideToggle('fast');
+        })
 
-<%--    })--%>
-<%--    //--%>
-<%--    let target = document.querySelector("#dynamic");--%>
-
-
-<%--    function randomString() {--%>
-<%--        let stringArr = ["대한민국 입시 부동의 1위", "Study and Changes Life", "2021년도 합격률 98%",--%>
-<%--            "학생 맞춤형 공부법", "최고의 강사 최고의 커리큘럼", "10년 연속 합격률 95% 달성"];--%>
-<%--        let selectString = stringArr[Math.floor(Math.random() * stringArr.length)];--%>
-<%--        let selectStringArr = selectString.split("");--%>
-
-<%--        return selectStringArr;--%>
-<%--    }--%>
-
-<%--    function resetTyping() {--%>
-<%--        target.textContent = "";--%>
-
-<%--        dynamic(randomString());--%>
-<%--    }--%>
-<%--    function dynamic(randomArr) {--%>
-
-<%--        if (randomArr.length > 0) {--%>
-<%--            target.textContent += randomArr.shift();--%>
-<%--            setTimeout(function () {--%>
-<%--                dynamic(randomArr);--%>
-<%--            }, 80);--%>
-<%--        } else {--%>
-<%--            setTimeout(resetTyping, 3000);--%>
-<%--        }--%>
-
-<%--    }--%>
-
-<%--    dynamic(randomString());--%>
+    })
+    //
+    let target = document.querySelector("#dynamic");
 
 
-<%--    function blink() {--%>
-<%--        target.classList.toggle("active");--%>
+    function randomString() {
+        let stringArr = ["대한민국 입시 부동의 1위", "Study and Changes Life", "2021년도 합격률 98%",
+            "학생 맞춤형 공부법", "최고의 강사 최고의 커리큘럼", "10년 연속 합격률 95% 달성"];
+        let selectString = stringArr[Math.floor(Math.random() * stringArr.length)];
+        let selectStringArr = selectString.split("");
 
-<%--    }--%>
+        return selectStringArr;
+    }
 
-<%--    setInterval(blink, 500);--%>
+    function resetTyping() {
+        target.textContent = "";
+
+        dynamic(randomString());
+    }
+    function dynamic(randomArr) {
+
+        if (randomArr.length > 0) {
+            target.textContent += randomArr.shift();
+            setTimeout(function () {
+                dynamic(randomArr);
+            }, 80);
+        } else {
+            setTimeout(resetTyping, 3000);
+        }
+
+    }
+
+    dynamic(randomString());
 
 
-<%--    var dday = new Date("November 17, 2023, 0:00:00").getTime();--%>
+    function blink() {
+        target.classList.toggle("active");
 
-<%--    setInterval(function () {--%>
+    }
 
-<%--        var today = new Date().getTime();--%>
-<%--        var gap = dday - today;--%>
-<%--        var day = Math.ceil(gap / (1000 * 60 * 60 * 24));--%>
-<%--        var hour = Math.ceil((gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));--%>
-<%--        var min = Math.ceil((gap % (1000 * 60 * 60)) / (1000 * 60));--%>
-<%--        var sec = Math.ceil((gap % (1000 * 60)) / 1000);--%>
-<%--        document.getElementById("count").innerHTML = "<b>2022년도 수능 D-DAY&nbsp;</b>  " + day + "일 " + hour + "시간 " + min + "분 " + sec + "초";--%>
-<%--    }, 1000);--%>
+    setInterval(blink, 500);
 
 
-<%--</script>--%>
+    var dday = new Date("November 17, 2023, 0:00:00").getTime();
+
+    setInterval(function () {
+
+        var today = new Date().getTime();
+        var gap = dday - today;
+        var day = Math.ceil(gap / (1000 * 60 * 60 * 24));
+        var hour = Math.ceil((gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var min = Math.ceil((gap % (1000 * 60 * 60)) / (1000 * 60));
+        var sec = Math.ceil((gap % (1000 * 60)) / 1000);
+        document.getElementById("count").innerHTML = "<b>2022년도 수능 D-DAY&nbsp;</b>  " + day + "일 " + hour + "시간 " + min + "분 " + sec + "초";
+    }, 1000);
+
+
+</script>
 </html>

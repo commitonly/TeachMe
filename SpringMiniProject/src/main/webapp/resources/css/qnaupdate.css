@@ -1,0 +1,65 @@
+
+#main_menu {
+    position: fixed;
+    width: 70px;
+    height: 210px;
+    right: 60px;
+    border-radius: 70px;
+    top: 35%;
+    text-align: center;
+
+}
+
+.cuz {
+    width: 50px;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    line-height: 34px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+.snd_menu {
+    background: #efefef;
+}
+
+.sub_menu {
+    display: none;
+}
+
+.four{
+    font-family: cursive;
+    text-align:center;
+    width:550px;
+    height:550px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    top:35%;
+    left:35%;
+    position:absolute;
+    border: 1px solid gray;
+}
+
+.four h1{
+    height:20px;
+    line-height: 20px;
+    text-align:center;
+}
+
+#updatebox{
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}

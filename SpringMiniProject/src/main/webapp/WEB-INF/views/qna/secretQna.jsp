@@ -9,70 +9,16 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <link rel="stylesheet" type="text/css" href="${root}/css/qna.css">
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
 <html>
 <head>
     <title>Title</title>
 </head>
 
-<style>
-
-
-    #main_menu {
-        position: fixed;
-        width: 70px;
-        height: 210px;
-        right: 60px;
-        border-radius: 70px;
-        top: 35%;
-        text-align: center;
-
-    }
-
-    .cuz {
-        width: 50px;
-    }
-
-    ul {
-        padding: 0;
-    }
-
-    li {
-        list-style: none;
-        line-height: 34px;
-    }
-
-    a {
-        text-decoration: none;
-        color: black;
-        text-align: center;
-    }
-
-    .snd_menu {
-        background: #efefef;
-    }
-
-    .sub_menu {
-        display: none;
-    }
-
-
-
-
-
-
-
-    #allbs{
-        text-align: center;
-        display: block;
-        display: flex;
-        margin-bottom: 30px;
-        margin-top: 20px;
-    }
-</style>
 <body>
-
-
+<c:set var="root" value="<%=request.getContextPath() %>"/>
+<link rel="stylesheet" type="text/css" href="${root}/css/secretqna.css">
 <div style="border: 1px solid black; width: 500px; height: 300px; margin: 0 auto; margin-bottom: 50px; margin-top: 50px; text-align: center; border-radius: 15px; ">
     <h2 style="text-align: center; margin-top: 70px; margin-bottom: 45px;" >비밀번호 확인</h2>
 
@@ -89,7 +35,7 @@
                   <td>
                       <c:choose>
                       <c:when test="${dto.restep==0}">
-                          <input type="password" name="pass" size="20" maxlength="4" placeholder="비밀번호 4자리 입력" pattern="[0-9]+" style="text-align: center;" id="pass1" required="required">
+                          <input type="password" name="pass" size="20" maxlength="4" placeholder="비밀번호 4자리 입력"  pattern="[0-9]+" style="text-align: center;" id="pass1" required="required ">
                       </c:when>
                         <c:otherwise>
                           <input type="password" name="pass" size="14" maxlength="4" placeholder="숫자 4자리 입력" pattern="[0-9]+" style="text-align: center;" id="pass1" required="required">
@@ -110,12 +56,20 @@
 </div>
 
 <script>
+
+
+    $(document).keyup(function(e) {
+        if ($("#pass1").is(":focus") && e.key == "Enter") {
+            printName();
+        }
+    });
     function printName() {
-        const pass1=
-            document.getElementById('pass1').value;
+
+        const pass1= $("#pass1").val();
         if (pass1==${dto.pass}){
             location.href="secretQna?qnanum=${dto.qnanum}&currentPage=${currentPage}";
             }
+
         else
         {
             alert("비밀번호가 맞지 않습니다");

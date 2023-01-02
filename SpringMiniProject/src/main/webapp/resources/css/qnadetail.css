@@ -1,0 +1,78 @@
+
+div.alist pre{
+    text-indent: 10px; /*들여쓰기*/
+    color: black;
+}
+div.alist img{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border: 1px solid gray;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+#detailbox
+{
+    margin: auto;
+    margin-bottom: 0px;
+}
+
+#buttonbox{
+    margin: auto;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+#listing{
+    margin: auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+#tpst{
+    font-size: 15px;
+    text-decoration: none;
+    color: grey;
+    font-style: italic;
+}
+
+
+
+#main_menu {
+    position: fixed;
+    width: 70px;
+    height: 210px;
+    right: 60px;
+    border-radius: 70px;
+    top: 35%;
+    text-align: center;
+
+}
+
+.cuz {
+    width: 50px;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    line-height: 34px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+.snd_menu {
+    background: #efefef;
+}
+
+.sub_menu {
+    display: none;
+}
+
+
