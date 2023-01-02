@@ -35,10 +35,10 @@
                   <td>
                       <c:choose>
                       <c:when test="${dto.restep==0}">
-                          <input type="password" name="pass" size="20" maxlength="4" placeholder="비밀번호 4자리 입력"  pattern="[0-9]+" style="text-align: center;" id="pass1" required="required ">
+                          <input type="password" name="pass" size="20" maxlength="4" placeholder="비밀번호 4자리 입력"  pattern="[0-9]+" style="text-align: center;" class="pass2" id="pass1" required="required ">
                       </c:when>
                         <c:otherwise>
-                          <input type="password" name="pass" size="14" maxlength="4" placeholder="숫자 4자리 입력" pattern="[0-9]+" style="text-align: center;" id="pass1" required="required">
+                          <input type="password" name="pass" size="14" maxlength="4" placeholder="숫자 4자리 입력" pattern="[0-9]+" style="text-align: center;" class="pass2" id="pass1" required="required">
                         </c:otherwise>
                       </c:choose>
                   </td>
@@ -61,21 +61,20 @@
     $(document).keyup(function(e) {
         if ($("#pass1").is(":focus") && e.key == "Enter") {
             printName();
+            console.log("테스트2");
         }
     });
     function printName() {
-
-        const pass1= $("#pass1").val();
-        if (pass1==${dto.pass}){
+        const pass1= $(".pass2").val();
+        if (pass1===`${dto.pass}`){
             location.href="secretQna?qnanum=${dto.qnanum}&currentPage=${currentPage}";
             }
-
         else
         {
             alert("비밀번호가 맞지 않습니다");
             location.reload();
         }
-
+        console.log("테스트");
     }
 
     $(document).ready(function dos() {
