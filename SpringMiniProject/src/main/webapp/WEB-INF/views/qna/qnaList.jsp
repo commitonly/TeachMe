@@ -23,7 +23,7 @@
 <div class="container">
     <div class="askBox">
         <button type="button" onclick="location.href='qnaList?'" class="askBoxAll">전체글보기</button>&nbsp;
-        <%-- 로그인이 되어 있을 경우에만 나의문의보기 활성화되는 코드 --%>
+        <%-- 로그인이 되어 있을 경우에만 나의문의보기 활성화 코드 --%>
         <c:if test="${sessionScope.loginok!=null}">
             <button type="button" onclick="location.href='qnaList?usernum=${sessionScope.usernum}'" class="myAsk">
                 나의문의보기
