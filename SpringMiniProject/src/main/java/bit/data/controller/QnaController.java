@@ -59,7 +59,7 @@ public class QnaController {
 
 
     @GetMapping("/qna/qnaDetail") //게시판 디테일
-    @ResponseBody
+//    @ResponseBody
     public ModelAndView qnaDetail(int qnanum, int currentPage, HttpServletRequest request){
 
         ModelAndView mview = new ModelAndView();
